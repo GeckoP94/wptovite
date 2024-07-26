@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/*HEHSlider*/
+
+#HEHSlider {
+	position: absolute;
+	z-index: 6000000000000000;
+	margin: 0 auto;
+	width: 800px;
+	height: 435px;
+	background-color: #FFF;
+	}
+	
+#HEHSlider #imageSlider {
+	width: 100%;
+	height: 356px;
+	position: relative;
+}
+
+#HEHSlider #imageSlider .slider_actus{ 
+	width: 100%;
+	height: 356px;
+	background: #999; 
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#HEHSlider #imageSlider .actu_invisible{ 
+	display: none; 
+}
+
+#HEHSlider #imageSlider .info{ 
+	position: absolute; 
+	top: 200px; 
+	left: 50px;
+	color: #FFF; 
+}
+#HEHSlider #imageSlider .info h2{ 
+	margin: 0px;
+	padding: 0px 50px 0px 20px;
+	font-size: 40px; 
+	font-family: 'Titillium Web', Arial;
+	font-weight: 900;
+	text-shadow: 0px 0px 5px #000;
+}
+#HEHSlider #imageSlider .info p{ 
+	margin: 0px;
+	padding: 0px 50px 10px 20px;
+	font-family: 'Open Sans Condensed', Arial;
+	font-weight: 300;
+	font-size: 18px; 
+}
+#HEHSlider #imageSlider a, #HEHSlider #imageSlider a:hover{ 
+	text-decoration: none;
+}
+#HEHSlider #imageSlider a .info{ 
+	color: #FFF; 
+	background: rgba(0,0,0,0.5); 
+	display: block;
+}
+#HEHSlider #imageSlider a:hover .info{ 
+	background: rgba(0,0,0,0.9); 
+}
+
+
+#HEHSlider #backgroundSlider{
+	background-color:#505353;
+	width:800px;
+	height:10px;
+}
+
+#HEHSlider #backgroundSlider #slider{
+	background-color:#1e1f1f;
+	height:10px;
+	width:0%;
+}
+
+#HEHSlider #boutonSlider{
+	position: relative;
+	width: 800px;
+	height: 79px;
+	background: url('Images/bg.jpg') no-repeat;
+}
+
+#HEHSlider #boutonSlider #bubulle {
+	position: absolute;
+	top: -10px;
+	left: 0px;
+	width: 200px;
+	height: 79px;
+	background: url('Images/btnOver.png') no-repeat;
+	z-index: 3;
+}
+
+#HEHSlider #boutonSlider ul{ 
+	position: absolute;
+	list-style: none;
+	width: 1000px; 
+	padding: 0px;
+	margin: 0px;
+	z-index: 5;
+}
+#HEHSlider #boutonSlider #dotSlider{ 
+	position: absolute;
+	width: 1000px;
+	height: 79px;
+	background: url('Images/dot.png') no-repeat;
+	z-index: 4;
+}
+#HEHSlider #boutonSlider li { 
+	float: left; 
+	width: 20%;
+}
+
+#HEHSlider #boutonSlider li a{ 
+	display: block; 
+	width: 180px;
+	height: 49px;
+	margin: 0px;
+	padding: 10px;
+	color: #505353;
+	cursor: pointer;
+	font-family: 'Open Sans Condensed', Arial;
+	font-weight: 700;
+	font-size: 16px;
+	text-decoration: none;
+}
+#HEHSlider #boutonSlider li a.selected{ 
+	color: #1e1f1f;
+}
+#HEHSlider #boutonSlider li a:hover{ 
+	
+}
+
+#HEHSlider #boutonSlider #bubulle {
+	position: absolute;
+	top: -10px;
+	left: 0px;
+	width: 200px;
+	height: 79px;
+	background: url('../img/btnOver.png') no-repeat;
+	z-index: 3;
+}
+
+#HEHSlider #boutonSlider #dotSlider{ 
+	position: absolute;
+	width: 1000px;
+	height: 79px;
+	background: url('../img/dot.png') no-repeat;
+	z-index: 4;

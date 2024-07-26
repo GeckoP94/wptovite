@@ -1,0 +1,503 @@
+/* Appel des polices nécéssaires à la réalisation des pages */
+
+@font-face {
+    font-family:"rob1";
+    src: url("./fonts/roboto-v20-latin-300.woff") format("truetype");
+}
+
+@font-face{
+    font-family:"rob2";
+    src: url("./fonts/roboto-v20-latin-500.woff") format("truetype");
+    }
+    
+@font-face{
+    font-family:"rob3";
+    src: url("./fonts/roboto-v20-latin-700.woff") format("truetype");
+}
+
+@font-face{
+    font-family:"rob4";
+    src: url("./fonts/roboto-v20-latin-900.woff") format("truetype");
+}
+
+@font-face {
+    font-family:"rob5";
+    src: url("./fonts/roboto-v20-latin-regular.woff") format("truetype");
+}
+
+#intro{
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 25px 25px;
+    font-family: rob1;
+}
+
+/* Élements de type class récurents à de multiples endroits dans le code - Sauf #voirplus qui est le sous-titre en plus petit dans la zone 5  */
+
+.h2{
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-family: "rob1";
+    font-weight: lighter;
+    background-color: white;
+    color:black;
+    margin: 0;
+    padding: 0;
+}
+
+.h2 h2{
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 30px 0;
+    font-family: "rob1";
+    font-weight: lighter;
+    margin: 0;  
+}
+
+#h2blue{
+    margin-top: 50px;
+    background-color: #172133;
+    color: white;
+}
+
+#voirplus{
+    font-size: 1.1rem;
+}
+
+/* Début de la mise en forme de la page */ 
+
+html, body{
+    background-color: white;
+}
+
+body{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* CSS DU HEADER */
+
+header{
+    background-color: #172133;
+    width: 100%;   
+}
+
+header img{
+    width: 200px;
+}
+
+/* CSS DE LA NAVIGATION - Display flex pour l'alignement des éléments*/
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav img{
+    width: 200px;
+    height: 120px;
+}
+
+nav ul{
+    width: 80%;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "rob1";
+    color: white;
+    align-items: flex-end;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* CSS DE LA NAVIGATION - CSS relatif aux liens et à la petite animation de soulignement */
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    display: inline;
+    position: relative;
+}
+
+nav ul li a:after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: #2b62c5;
+    transition: all .4s ease-in-out;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* Section 1 du site : Le slider appelé par l'ID slider car utilisé une seule fois dans la page */
+
+#slider{
+    position: relative;
+    display: grid;
+}
+
+#slider img{
+    width: 100%;
+}
+
+#slider button{
+    position: absolute;
+    padding: 15px 40px;
+    background-color: #2b62c5;
+    border: none;
+    color: white;
+    font-family: "rob1";
+    font-size: 1em;
+    bottom: 10%;
+    right: 3%;
+    transition: background-color ease-in-out .3s, color ease-in .6s;
+    display: block;
+}
+
+#slider button:hover{
+    background-color: #172173;
+    color: white;
+    font-weight: bold;
+}
+
+button a{
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  position: relative;
+}
+
+/* Zone 2 - Section #4buttons / Allez plus loin */
+
+#foursquare{
+    background-color: #172133;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.pictotexte a{
+    width: 200px;
+    height: 200px;
+    background-color: #2b62c5;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    transition: background-color ease-in-out .3s, color ease-in .6s;
+    text-decoration: none;
+}
+
+.pictotexte a:hover{
+    background-color: #172173;
+    text-decoration: none;
+}
+
+.pictotexte img a{
+    width: 75px;
+    height: 75px;
+}
+
+.pictotexte span {
+    margin-top: 10px;
+    color: white;
+    font-family: "rob2";
+    text-transform: uppercase;
+    line-break: auto;
+}
+
+/* CSS Zone 3 - Offres du moment*/
+
+#zone3{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    font-family: "rob5";
+}
+
+.offredumoment{
+    width: 33%;
+}
+
+.offredumoment img{
+    width: 100%;
+}
+
+.offredumoment button{
+    display: block;
+    margin: 20px 0;
+    padding: 15px 20px;
+    background-color: #133d5f;
+    color: white;
+    text-transform: uppercase;
+    border:none;
+    transition: all .4s ease;
+}
+
+.offredumoment button:hover{
+    background-color: #172173;
+    transform: translateX(10px);
+    font-weight: bold;
+}
+
+/* CSS Zone 4 - Nos best sellers */
+
+#zone4{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#zone4 button{
+    border: none;
+    background-color: #143f62;
+    padding: 15px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    transition: background-color ease-in-out 1s, color ease-in .6s;
+}
+
+#zone4 button:hover{
+    background-color: #172173;
+    font-weight: bold;
+}
+
+.bestseller{
+    background-color: white;
+    width: 20%;
+    font-family: "rob1";
+    border: 1px solid lightgrey;
+}
+
+/* CSS Zone 5 - Nos best sellers */
+
+#zone5{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    font-family: "rob1";
+}
+
+.actualités{
+    background-color: white;
+    width: 45%;
+}
+
+.actualités img{
+    width: 99%;
+}
+
+.actualités button{
+    border: none;
+    background-color: #143f62;
+    padding: 15px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    transition: all .4s ease;
+}
+
+.actualités button:hover{
+   background-color: #172173;
+   color: white;
+   font-weight: bold;
+   transform: translateX(10px);
+}
+
+/* Règle du footer, de ses menus et des icônes réseaux sociaux */
+
+footer{
+    background-color: #f5f5f5;
+}
+
+#containerfootertotal{
+    display: flex;
+    width: 100%;
+}
+
+.menufooter{
+ width: 27%;
+ margin: 0 auto;
+}
+
+.menufooter ul li a{
+    text-decoration: none;
+    color: black;
+    display: inline;
+    position: relative;
+   
+}
+
+.menufooter ul li a:after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    width: 0%;
+    background-color: #2b62c5;
+    transition: all .4s ease-in-out;
+}
+
+.menufooter a:hover::after{
+    width: 100%;
+}
+
+#social{
+    background-color: white;
+    margin-top: 150px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 75px;
+}
+
+.socialicon{
+    display: flex;
+    width: 25%;
+    border: 1px solid #f5f5f5;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialicon img{
+    width: 25px;
+    transition: all .2s ease;
+}
+
+.socialicon img:hover{
+    width: 30px;
+}
+
+.finalbutton{
+    height: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-family: "rob3" ;
+}
+
+.finalbutton a{
+  color: white;
+  text-decoration: none;
+  padding: 25px 220px;
+  font-size: 1em;
+}
+
+.finalbutton a span{
+    color: black;
+    text-decoration: none;
+  }
+
+.finalbuttonclass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: #172133;
+    align-content: center;
+    color: white;
+    height: 50px;
+}
+
+.finalbuttonclass:nth-last-child(1){
+    background-color: #ffffff;
+    color: #172133;
+}
+
+#hoverone:hover{
+    background-color: #00192c ;
+    transition: all .6s ease;
+}
+
+#hovertwo:hover{
+    background-color: #f8f8f8;
+    transition: all .6s ease;
+}
+
+.bluefont{
+    color: #071125;
+    font-family: "rob2";
+    font-weight: normal;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.menucontentfooter{
+    color: #535353;
+    font-family: "rob1";
+    font-weight: lighter;
+    padding: 6px 0;
+    font-size: 0.9rem;
+}
+
+ul{
+    list-style-type: none;
+}
+
+#center{
+    text-align: center;
+}
+
+#nummer2{
+    margin-bottom: 30px;
+}
+
+#extra{
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+    width: 100%;
+    height: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    background-color: none;
+    color: #172133;
+    font-family: "rob1";
+}
+
+.extra2{
+    border-left: 1px solid black;
+    padding: 1px 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.extra2 a{
+    text-decoration: none;
+    color: #071125;
+}
+
+.extra2:nth-of-type(1){
+    border-left: 0;
+}
+
+
+
+
+
+
+
+
